@@ -10,12 +10,119 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.tawi.rutasproyecto.MainActivity">
 
+    <TextView
+        android:text="Ubicacion Actual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/button3"
+        android:layout_toStartOf="@+id/button3"
+        android:id="@+id/textView4"
+        android:textColor="@color/cast_expanded_controller_background_color" />
+
+    <TextView
+        android:text="Latitud:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:textColor="@color/cast_expanded_controller_background_color"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvPrecision"
+        android:textColor="@color/cast_expanded_controller_background_color"
+        android:layout_below="@+id/tvAltura"
+        android:layout_alignLeft="@+id/tvAltura"
+        android:layout_alignStart="@+id/tvAltura"
+        android:layout_marginTop="19dp" />
+
+    <TextView
+        android:text="Longitud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView6"
+        android:textColor="@color/cast_expanded_controller_background_color"
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="12dp" />
+
     <Button
-        android:text="Iniciar Viaje"
+        android:text="Ver Mapa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button2"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/tvPrecision"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="41dp" />
+
+    <Button
+        android:text="Nuevo Viaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button5"
+        android:layout_below="@+id/button2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="26dp" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvLongitud"
+        android:textColor="@color/cast_expanded_controller_background_color"
+        android:layout_alignBaseline="@+id/textView6"
+        android:layout_alignBottom="@+id/textView6"
+        android:layout_alignLeft="@+id/tvLatitud"
+        android:layout_alignStart="@+id/tvLatitud" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:id="@+id/tvAltura"
+        android:textColor="@color/cast_expanded_controller_background_color"
+        android:layout_below="@+id/tvLongitud"
+        android:layout_alignLeft="@+id/tvLongitud"
+        android:layout_alignStart="@+id/tvLongitud" />
+
+    <TextView
+        android:text="Precision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView13"
+        android:textColor="@color/cast_expanded_controller_background_color"
+        android:layout_alignBottom="@+id/tvPrecision" />
+
+    <TextView
+        android:text="Altura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView12"
+        android:textColor="@color/cast_expanded_controller_background_color"
+        android:layout_alignBaseline="@+id/tvAltura"
+        android:layout_alignBottom="@+id/tvAltura"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvLatitud"
+        android:textColor="@color/cast_expanded_controller_background_color"
+        android:layout_alignBaseline="@+id/textView5"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_toRightOf="@+id/textView4"
+        android:layout_toEndOf="@+id/textView4" />
 
 </RelativeLayout>
