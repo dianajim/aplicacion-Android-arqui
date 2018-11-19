@@ -77,8 +77,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
          lat_pos_ini=14.587687; //latitud de Posicion de inicio de viaje
          long_pos_ini=-90.553147;//longitud de Posicion de Inicio de viaje
 
-         lat_pos_fin=14.652525; //latitud de Posicion de fin  de Viaje
-         long_pos_fin=-90.488321;//longitud de posicion de fin de Viaje
+
+         lat_pos_fin=14.663816;//14.652525; //latitud de Posicion de fin  de Viaje
+         long_pos_fin= -90.494968;//-90.488321;//longitud de posicion de fin de Viaje
 
         // Obtencion de la ubicacion actual por medio de gps
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED)
@@ -112,7 +113,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         UiSettings uiSettings=mMap.getUiSettings();
         uiSettings.setZoomControlsEnabled(true); //permite activar el zoom del mapa
         float zoomlevel=10;  //zoom del mapa
-
+        uiSettings.setMyLocationButtonEnabled(true);
+        mMap.setMyLocationEnabled(true);
 
         //marca de inicio
         LatLng posicion_inicio = new LatLng(lat_pos_ini, long_pos_ini );
@@ -123,9 +125,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions().position(fin_viaje).title("Mi Destino").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN)));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(fin_viaje,zoomlevel));
         //marca de mi ubicacion
-        LatLng mi_posicion = new LatLng(lat_pos_act, long_pos_act );
-        mMap.addMarker(new MarkerOptions().position(mi_posicion).title("Mi Ubicacion").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET)));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mi_posicion,zoomlevel));
+       // LatLng mi_posicion = new LatLng(lat_pos_act, long_pos_act );
+       // mMap.addMarker(new MarkerOptions().position(mi_posicion).title("Mi Ubicacion").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET)));
+       // mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mi_posicion,zoomlevel));
+
+
 
         //Poligono de Ruta
         Polyline line = mMap.addPolyline(new PolylineOptions()
